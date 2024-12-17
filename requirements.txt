@@ -8,3 +8,5 @@ scikit-learn
 kaggle
 python-dotenv
 kagglehub
+notebook
+ipywidgets
