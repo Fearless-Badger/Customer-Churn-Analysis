@@ -1,0 +1,28 @@
+name: Download Kaggle Dataset
+
+on:
+  workflow_dispatch
+
+jobs:
+  download:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Kaggle CLI
+        run: pip install kaggle
+
+      - name: Set Up Kaggle API Token
+        env:
+          KAGGLE_API_KEY : ${{ secrets.KAGGLE_API_KEY }}
+        run: |
+          New-Item -ItemType Directory -Path "$env:USERPROFILE\.kaggle" -Force
+          Set-Content -Path "$env:USERPROFILE\.kaggle\kaggle.json" -Value $env:KAGGLE_API_KEY
+          chmod 600 "$env:USERPROFILE\.kaggle\kaggle.json"
+
+      - name: Run PowerShell Script
+        env:
+          OUTPUT_PATH: "${{ secrets.OUTPUT_PATH }}"
+        shell: pwsh
+        run: "${{ secrets.SCRIPT_PATH }}"
