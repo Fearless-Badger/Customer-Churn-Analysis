@@ -1,21 +1,29 @@
 $dataset = "shrutimechlearn/churn-modelling"
-$zip_file = "churn-modelling.zip"
-$output_dir = "$env:OUTPUT_PATH"
+$output_dir = $env:OUTPUT_PATH -replace '(^"|"$)', ''
 
-Write-Output "dir : $output_dir"
+Write-Output "OUTPUT_PATH: $output_dir"
+Write-Output "Attempting to download dataset: $dataset"
+
+if (-not $output_dir) {
+    Write-Error "ERROR: OUTPUT_PATH is not set!"
+    exit 1
+}
+
+if (-not (Test-Path -Path $output_dir)) {
+    Write-Output "Creating output directory: $output_dir"
+    New-Item -ItemType Directory -Path $output_dir -Force | Out-Null
+}
 
 try {
-    Write-Output "Attempting Download Dataset : $dataset"
-    kaggle datasets download -d $dataset -p "$outputdir" --unzip --force
+    kaggle datasets download -d $dataset -p "$output_dir" --unzip --force
 
-    if (Test-Path "$outputdir\$zip_file"){
-        Write-Output "Success!"
-    } else{
-        Write-Output "Download Failed"
+    if ($?) {
+        Write-Output "Success! Dataset downloaded to: $output_dir"
+    } else {
+        Write-Error "Download failed!"
     }
-
 } catch {
-    Write-Error "Error while attempting download : $_"
+    Write-Error "Error while attempting download: $_"
 }
 
 Write-Output "Script Terminated"
