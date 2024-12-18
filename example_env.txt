@@ -1,10 +1,10 @@
-This is an example of the ".env" file you need to place in the "Customer-Churn-Analysis" folder. 
+This is an example of the ".env" file you need to place in the "analysis" folder. 
 The file paths should NOT have double quotes around them in this file. Same with the API key
 
-OUTPUT_PATH = current working directory.
+OUTPUT_PATH = analysis folder
 KAGGLE_API_KEY = kaggle api key
-SCRIPT_PATH= path where the script is.
-LOCAL_FILE_LOCATION= path to where .csv file SHOULD be.
+SCRIPT_PATH= path where the script is
+LOCAL_FILE_LOCATION= path to where .csv file SHOULD be
 
 Copy and paste the FOUR lines of code BELOW the dashed line into your ".env" file.
 Then, place YOUR information in the "..." sections of the variable definitions.
