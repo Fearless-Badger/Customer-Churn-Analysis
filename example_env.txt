@@ -9,7 +9,7 @@ LOCAL_FILE_LOCATION= path to where .csv file SHOULD be.
 Copy and paste the FOUR lines of code BELOW the dashed line into your ".env" file.
 Then, place YOUR information in the "..." sections of the variable definitions.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-OUTPUT_PATH=...\Customer-Churn-Analysis
+OUTPUT_PATH=...\Customer-Churn-Analysis\analysis
 KAGGLE_API_KEY=...
-SCRIPT_PATH=...\Customer-Churn-Analysis\download_data.ps1
-LOCAL_FILE_LOCATION=...\Customer-Churn-Analysis\Churn_Modelling.csv
+SCRIPT_PATH=...\Customer-Churn-Analysis\analysis\download_data.ps1
+LOCAL_FILE_LOCATION=...\Customer-Churn-Analysis\analysis\Churn_Modelling.csv
