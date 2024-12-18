@@ -10,3 +10,4 @@ python-dotenv
 kagglehub
 notebook
 ipywidgets
+statsmodels
