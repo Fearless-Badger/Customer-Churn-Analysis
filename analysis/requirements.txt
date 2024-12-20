@@ -4,7 +4,7 @@ tensorflow
 keras
 matplotlib
 seaborn
-scikit-learn
+sklearn-pandas
 kaggle
 python-dotenv
 kagglehub
