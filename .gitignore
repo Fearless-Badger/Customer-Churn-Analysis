@@ -163,3 +163,4 @@ cython_debug/
 churn-modelling.zip
 test.py
 Churn_Modelling.csv
+analysis/test2.py
