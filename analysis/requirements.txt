@@ -11,3 +11,4 @@ kagglehub
 notebook
 ipywidgets
 statsmodels
+IPython
