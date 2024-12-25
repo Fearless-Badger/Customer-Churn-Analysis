@@ -164,3 +164,7 @@ churn-modelling.zip
 test.py
 Churn_Modelling.csv
 analysis/test2.py
+plots
+k_requirements.txt
+vscode_requirements.txt
+analysis/plots/good_confusion_matrix.png
