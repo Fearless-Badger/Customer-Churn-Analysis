@@ -29,7 +29,6 @@ This project is about predicting customer churn for a bank using machine learnin
 - **Seaborn** for visualizing the data.
 - **TensorFlow/Keras** to build and optimize the neural network model.
 - **Sklearn** for model evaluation and metrics.
-- **PowerShell** to handle dataset downloads.
 
 ## Results
 - **Recall:** 0.7  
